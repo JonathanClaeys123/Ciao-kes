@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ciaokes Systeem</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container" id="loginContainer">
+    <h1>Welkom bij het Ciaokes Systeem</h1>
+    <p>Kies je naam om in te loggen:</p>
+    <select id="nameSelect">
+      <option value="" disabled selected>Kies je naam</option>
+      <option value="Camille">Camille</option>
+      <option value="Elise">Elise</option>
+      <option value="Nanou">Nanou</option>
+      <option value="Emilie">Emilie</option>
+      <option value="Inse">Inse</option>
+      <option value="Jooms">Jooms</option>
+      <option value="Jens">Jens</option>
+      <option value="Jonathan">Jonathan</option>
+      <option value="Joren">Joren</option>
+      <option value="Patje">Patje</option>
+      <option value="Vigo">Vigo</option>
+      <option value="Maxim">Maxim</option>
+      <option value="Lien">Lien</option>
+      <option value="Klaas">Klaas</option>
+      <option value="SilkeF">SilkeF</option>
+      <option value="Jip">Jip</option>
+      <option value="SilkeJ">SilkeJ</option>
+      <option value="Tom">Tom</option>
+    </select>
+    <button onclick="signup()">Inloggen</button>
+  </div>
+
+  <div class="container hidden" id="pointsContainer">
+    <h1>Welkom, <span id="currentUser"></span>!</h1>
+    <p id="pointDisplay">Je hebt <span id="userPoints"></span> ciaokes</p>
+    <h2>Transacties</h2>
+    <table id="transactionTable">
+      <thead>
+        <tr>
+          <th>Van</th>
+          <th>Naar</th>
+          <th>Aantal Ciaokes</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <button onclick="showTransactionForm()">Ciaokes Uitgeven</button>
+    <button onclick="showAllPoints()">Tussenstand</button>
+  </div>
+
+  <div class="container hidden" id="transactionContainer">
+    <h1>Geef Ciaokes Weg</h1>
+    <p>Kies ontvangers:</p>
+    <div id="recipientList"></div>
+    <p>Aantal ciaokes per persoon (max 18):</p>
+    <input type="number" id="pointsToGive" min="1" max="18" value="1">
+    <button onclick="submitTransaction()">Verzenden</button>
+    <button onclick="goBack()">Terug</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
